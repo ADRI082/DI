@@ -10,7 +10,7 @@ namespace PicassoTest.Tests
         }
 
         [Test]
-        public void demeritPoinst_for_minimumSpeed_is_ok()
+        public void demeritPoinst_for_minimumSpeed_return_0()
         {
 
             var demerit = new DemeritPointsCalculator();
@@ -20,7 +20,7 @@ namespace PicassoTest.Tests
         }
 
         [Test]
-        public void demeritPoinst_for_less_than_minimumSpeed_is_ok()
+        public void demeritPoinst_for_less_than_minimumSpeed_return_0()
         {
 
             var demerit = new DemeritPointsCalculator();
@@ -50,7 +50,7 @@ namespace PicassoTest.Tests
         }
 
         [Test]
-        public void demeritPoinst_for_speed_between_65_and_300_works()
+        public void demeritPoinst_for_speed_between_65_and_300_return_more_than_0()
         {
 
             var demerit = new DemeritPointsCalculator();
