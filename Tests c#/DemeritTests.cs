@@ -61,7 +61,24 @@ namespace PicassoTest.Tests
 
         }
 
+         [Test]
+        public void demeritPoinst_for_speed_more_than_300_return_exception()
+        {
+            var demerit = new DemeritPointsCalculator(); 
 
+            Assert.Throws<ArgumentOutOfRangeException>(() => demerit.CalculateDemeritPoints(301));
+
+        }
+
+        [Test]
+        public void demeritPoinst_for_negative_speed()
+        {
+            var demerit = new DemeritPointsCalculator();
+
+
+            Assert.Throws<ArgumentOutOfRangeException>(() => demerit.CalculateDemeritPoints(-3));
+
+        }
 
     }
 }
